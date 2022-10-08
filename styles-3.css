@@ -1,0 +1,52 @@
+p {
+    font-family: BEBAS NEUE;
+    font-size: 30px;
+    margin-top: 80px;
+}
+
+.getNum {
+    margin: 0 0 0 550px;
+    padding: 10px 10px 10px 10px;
+    width: 400px;
+    height: 200px;
+    background-color: antiquewhite;
+}
+
+.getNum input {
+    margin: 25px 0 0 2px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 15px;
+    height: 40px;
+    width: 300px;
+    border: 0;
+}
+
+.Operations {
+    margin: 10px 0 0 20px;
+    display: flex;
+}
+
+.Operations input {
+    font-family: sans-serif;
+    font-size: 15px;
+    width: 64.3px;
+    height: 60px;
+    margin: 5px 3px 5px 2px;
+    border: 0;
+    color:white;
+    background-color: brown;
+}
+
+#clear {
+    margin: 10px 0 0 0;
+    padding: 2px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 15px;
+    width: 95px;
+    height: 22px;
+    border: 0;
+    color: brown;
+    background-color: white;
+}

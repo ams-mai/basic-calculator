@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <link rel="stylesheet" href="styles-3.css">
+    <center><p>Basic Calculator</p></center>
+
+    <div class="getNum">
+
+        <div>
+            <center><form name="form"><input id="num-1"></form></center>
+            <center><input id="clear" type="button" value="CLEAR" onclick="clearInput()"></center>
+        </div>
+
+        <div class="Operations">
+            <div>
+                <input id="add" type="button" value="+" onclick="insertChar('+')" autofocus>
+                <input id="subs" type="button" value="-" onclick="insertChar('-')" autofocus>
+                <input id="multi" type="button" value="x" onclick="insertChar('*')" autofocus>
+                <input id="" type="button" value="/" onclick="insertChar('/')" autofocus>
+                <input type="button" value="=" onclick="total()" autofocus>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+
+        function clearInput() {
+            $('#num-1').val('');
+        }
+
+        function insertChar(char) {
+            $('#num-1').val($('#num-1').val() + char).focus();
+        }
+
+        function total() {
+            let expression = $('#num-1').val();
+            let length = expression.length;
+            let flag = false;
+            let last = expression[length-1];
+
+            if(last == '+' || last == '-' || last == '*' || last == '/')
+                flag = true;
+            if(flag)
+                $('#num-1').val("syntax error").focus();
+            else
+                $('#num-1').val(eval($('#num-1').val())).focus();
+        }
+
+    </script>
+
+
+</body>
+</html>
